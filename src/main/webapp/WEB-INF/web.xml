@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <welcome-file-list>
+        <welcome-file>individu</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!-- Servlet client -->
+    <servlet>
+        <servlet-name>ClientServlet</servlet-name>
+        <servlet-class>service.Client.ClientServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClientServlet</servlet-name>
+        <url-pattern>/client</url-pattern>
+    </servlet-mapping>
+    <!-- Fin servlet client -->
+
+    <!-- Servlet connexion -->
+    <servlet>
+        <servlet-name>ConnexionServlet</servlet-name>
+        <servlet-class>service.Client.ConnexionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConnexionServlet</servlet-name>
+        <url-pattern>/connexion</url-pattern>
+    </servlet-mapping>
+    <!-- fin connexion-->
+
+    <!-- Servlet deconnexion -->
+    <servlet>
+        <servlet-name>DeconnexionServlet</servlet-name>
+        <servlet-class>service.Client.DeconnexionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeconnexionServlet</servlet-name>
+        <url-pattern>/deconnexion</url-pattern>
+    </servlet-mapping>
+    <!-- fin deconnexion-->
+
+    <!-- Servlet inscription -->
+    <servlet>
+        <servlet-name>InscriptionServlet</servlet-name>
+        <servlet-class>service.Client.InscriptionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InscriptionServlet</servlet-name>
+        <url-pattern>/inscription</url-pattern>
+    </servlet-mapping>
+    <!-- fin inscription-->
+
+    <!-- Servlet inscription -->
+    <servlet>
+        <servlet-name>inscriptionVendeurServlet</servlet-name>
+        <servlet-class>service.Vendeur.inscriptionVendeurServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>inscriptionVendeurServlet</servlet-name>
+        <url-pattern>/inscriptionVendeur</url-pattern>
+    </servlet-mapping>
+    <!-- fin inscription-->
+
+    <!-- Servlet commande -->
+    <servlet>
+        <servlet-name>CommandeServlet</servlet-name>
+        <servlet-class>service.Commande.CommandeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CommandeServlet</servlet-name>
+        <url-pattern>/commande</url-pattern>
+    </servlet-mapping>
+    <!-- fin commande-->
+
+    <!-- Servlet produit -->
+    <servlet>
+        <servlet-name>ProduitServlet</servlet-name>
+        <servlet-class>service.Produit.ProduitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProduitServlet</servlet-name>
+        <url-pattern>/produit</url-pattern>
+    </servlet-mapping>
+    <!-- Fin servlet produit -->
+
+    <!-- Servlet produit search-->
+    <servlet>
+        <servlet-name>ProduitSearchServlet</servlet-name>
+        <servlet-class>service.Produit.ProduitSearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProduitSearchServlet</servlet-name>
+        <url-pattern>/produitSearch</url-pattern>
+    </servlet-mapping>
+    <!-- Fin servlet produit search-->
+
+    <!-- Servlet vendeur -->
+    <servlet>
+        <servlet-name>VendeurServlet</servlet-name>
+        <servlet-class>service.Vendeur.VendeurServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VendeurServlet</servlet-name>
+        <url-pattern>/vendeur</url-pattern>
+    </servlet-mapping>
+    <!-- Fin servlet vendeur -->
+
+    <!-- Servlet index -->
+    <servlet>
+        <servlet-name>IndexServlet</servlet-name>
+        <servlet-class>service.IndexServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>IndexServlet</servlet-name>
+        <url-pattern>/index</url-pattern>
+    </servlet-mapping>
+    <!-- fin index -->
+
+
+
+
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>

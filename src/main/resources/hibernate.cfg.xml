@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:oracle:thin:@//127.0.0.1:1521</property>
+    <property name="connection.driver_class">oracle.jdbc.OracleDriver</property>
+    <property name="connection.username">tpecommerce</property>
+    <property name="connection.password">tpecommerce</property>
+      <mapping class="entity.Adresse"/>
+      <mapping class="entity.Adressescommandes"/>
+      <mapping class="entity.Cb"/>
+      <mapping class="entity.Client"/>
+      <mapping class="entity.Commande"/>
+      <mapping class="entity.Editeur"/>
+      <mapping class="entity.Etat"/>
+      <mapping class="entity.Etatcommande"/>
+      <mapping class="entity.Genre"/>
+      <mapping class="entity.LigneCommande"/>
+      <mapping class="entity.Noteproduit"/>
+      <mapping class="entity.Notevendeur"/>
+      <mapping class="entity.Produit"/>
+      <mapping class="entity.Tva"/>
+      <mapping class="entity.Typeadresse"/>
+      <mapping class="entity.Vend"/>
+      <mapping class="entity.Vendeur"/>
+      <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>
